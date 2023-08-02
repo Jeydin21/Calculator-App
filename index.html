@@ -17,10 +17,10 @@
       <tr>
         <td colspan="3" class="p-1"><input
             class="bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-[30px] py-5 rounded-[5px] border-[none] border-2 border-solid border-[black]"
-            type="text" id="result" readonly placeholder="Calculate!"></td>
+            type="text" id="result" disabled placeholder="Calculate!"></td>
         <td class="p-1"><input
             class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="C" onclick="clr()"></td>
+            type="button" value="Clear" onclick="clr()"></td>
       </tr>
       <tr>
         <td class="p-1"><input
@@ -34,7 +34,7 @@
             type="button" value="3" onclick="dis('3')" onkeydown="myFunction(event)"></td>
         <td class="p-1"><input
             class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="/" onclick="dis('/')" onkeydown="myFunction(event)"></td>
+            type="button" value="/" onclick="dis(' / ')" onkeydown="myFunction(event)"></td>
       </tr>
       <tr>
         <td class="p-1"><input
@@ -48,7 +48,7 @@
             type="button" value="6" onclick="dis('6')" onkeydown="myFunction(event)"></td>
         <td class="p-1"><input
             class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="*" onclick="dis('*')" onkeydown="myFunction(event)"></td>
+            type="button" value="*" onclick="dis(' * ')" onkeydown="myFunction(event)"></td>
       </tr>
       <tr>
         <td class="p-1"><input
@@ -62,7 +62,7 @@
             type="button" value="9" onclick="dis('9')" onkeydown="myFunction(event)"></td>
         <td class="p-1"><input
             class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="-" onclick="dis('-')" onkeydown="myFunction(event)"></td>
+            type="button" value="-" onclick="dis(' - ')" onkeydown="myFunction(event)"></td>
       </tr>
       <tr>
         <td class="p-1"><input
@@ -76,7 +76,7 @@
             type="button" value="=" onclick="solve()"></td>
         <td class="p-1"><input
             class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="+" onclick="dis('+')" onkeydown="myFunction(event)"></td>
+            type="button" value="+" onclick="dis(' + ')" onkeydown="myFunction(event)"></td>
       </tr>
     </table>
     <script src="script.js"></script>
