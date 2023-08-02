@@ -30,6 +30,6 @@ function solve() {
   document.getElementById("result").value = y
 }
 
-function clear() {
+function clr() {
   document.getElementById("result").value = ""
 }
