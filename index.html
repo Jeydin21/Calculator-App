@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator App</title>
-    <script async src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body
     class="absolute top-0 z-[-2] h-screen w-screen bg-red-500 bg-[radial-gradient(#ffffff33_1px,#f2f2f2_1px)] flex dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] items-center justify-center">
 
-    <div class="max-w-prose mx-auto grid grid-cols-4 gap-4 p-10">
+    <div class="max-w-prose mx-auto my-auto grid grid-cols-4 gap-4 p-10">
         <input type="text" disabled placeholder="Calculate!" id="result"
             class="bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-[30px] py-5 rounded-[5px] border-[none] border-2 border-solid border-[black] col-span-3">
         <button onclick="reset()"
