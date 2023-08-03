@@ -2,93 +2,62 @@
 <html lang="en" class="h-full w-full">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <script defer src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <script async src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-  <!-- Background -->
-  <div
-    class="absolute top-0 z-[-2] h-screen w-screen bg-red-500 bg-[radial-gradient(#ffffff33_1px,#f2f2f2_1px)] dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] flex items-center justify-center">
+<body
+    class="absolute top-0 z-[-2] h-screen w-screen bg-red-500 bg-[radial-gradient(#ffffff33_1px,#f2f2f2_1px)] flex dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] items-center justify-center">
 
-    <table class="mx-auto" id="calculator">
-      <tr>
-        <td colspan="3" class="p-1"><input
-            class="bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-[30px] py-5 rounded-[5px] border-[none] border-2 border-solid border-[black]"
-            type="text" id="result" disabled placeholder="Calculate!"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="Clear" onclick="clr()"></td>
-      </tr>
-      <tr>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="1" onclick="dis('1')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="2" onclick="dis('2')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="3" onclick="dis('3')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="/" onclick="dis(' / ')" onkeydown="myFunction(event)"></td>
-      </tr>
-      <tr>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="4" onclick="dis('4')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="5" onclick="dis('5')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="6" onclick="dis('6')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="*" onclick="dis(' * ')" onkeydown="myFunction(event)"></td>
-      </tr>
-      <tr>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="7" onclick="dis('7')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="8" onclick="dis('8')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="9" onclick="dis('9')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="-" onclick="dis(' - ')" onkeydown="myFunction(event)"></td>
-      </tr>
-      <tr>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="0" onclick="dis('0')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="." onclick="dis('.')" onkeydown="myFunction(event)"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="=" onclick="solve()"></td>
-        <td class="p-1"><input
-            class="dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-10 py-5 rounded-[5px] border-[none]"
-            type="button" value="+" onclick="dis(' + ')" onkeydown="myFunction(event)"></td>
-      </tr>
-    </table>
-    <script src="script.js"></script>
-
-  </div>
+    <div class="max-w-prose mx-auto grid grid-cols-4 gap-4 p-10">
+        <input type="text" disabled placeholder="Calculate!" id="result"
+            class="bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-[30px] py-5 rounded-[5px] border-[none] border-2 border-solid border-[black] col-span-3">
+        <button onclick="reset()"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">C</button>
+        <button onclick="display('1')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">1</button>
+        <button onclick="display('2')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">2</button>
+        <button onclick="display('3')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">3</button>
+        <button onclick="display(' / ')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">/</button>
+        <button onclick="display('4')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">4</button>
+        <button onclick="display('5')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">5</button>
+        <button onclick="display('6')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">6</button>
+        <button onclick="display(' * ')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">*</button>
+        <button onclick="display('7')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">7</button>
+        <button onclick="display('8')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">8</button>
+        <button onclick="display('9')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">9</button>
+        <button onclick="display(' - ')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">-</button>
+        <button onclick="display('0')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">0</button>
+        <button onclick="display('.')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">.</button>
+        <button onclick="solve()"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">=</button>
+        <button onclick="display(' + ')"
+            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">+</button>
+    </div>
 </body>
 
+<script src="script.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
-  integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
-  integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </html>

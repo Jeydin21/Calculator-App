@@ -1,5 +1,5 @@
-function dis(val) {
-  document.getElementById("result").value += val
+function display(value) {
+  document.getElementById("result").value += value
 }
 
 function myFunction(event) {
@@ -30,6 +30,6 @@ function solve() {
   document.getElementById("result").value = y
 }
 
-function clr() {
+function reset() {
   document.getElementById("result").value = ""
 }
