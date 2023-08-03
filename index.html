@@ -2,8 +2,8 @@
 <html lang="en" class="h-full w-full">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Primary Meta Tags -->
     <title>Calculator App</title>
     <meta name="title" content="Calculator App" />
@@ -26,51 +26,50 @@
     <meta property="twitter:description"
         content="A simple calculator web app that features support for light and dark mode, as well as mobile responsiveness" />
     <meta property="twitter:image" content="https://calc.j21.dev/assets/banner.png" />
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 
     <script defer src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body
-    class="absolute top-0 z-[-2] h-screen w-screen bg-red-500 bg-[radial-gradient(#ffffff33_1px,#f2f2f2_1px)] flex dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] items-center justify-center">
-
-    <div class="max-w-prose mx-auto my-auto grid grid-cols-4 gap-4 p-10">
+    class="absolute top-0 z-[-2] flex h-screen w-screen items-center justify-center bg-red-500 bg-[radial-gradient(#ffffff33_1px,#f2f2f2_1px)] bg-[size:20px_20px] dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]">
+    <div class="mx-auto my-auto grid max-w-prose grid-cols-4 gap-4 p-10">
         <input type="text" disabled placeholder="Calculate!" id="result"
-            class="bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold px-[30px] py-5 rounded-[5px] border-[none] border-2 border-solid border-[black] col-span-3">
+            class="col-span-3 rounded-[5px] border-2 border-solid border-[black] border-[none] bg-[#222222] px-[30px] py-5 text-2xl font-bold text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222]" />
         <button onclick="reset()"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">C</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">C</button>
         <button onclick="display('1')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">1</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">1</button>
         <button onclick="display('2')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">2</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">2</button>
         <button onclick="display('3')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">3</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">3</button>
         <button onclick="display(' / ')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">/</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">/</button>
         <button onclick="display('4')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">4</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">4</button>
         <button onclick="display('5')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">5</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">5</button>
         <button onclick="display('6')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">6</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">6</button>
         <button onclick="display(' * ')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">*</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">*</button>
         <button onclick="display('7')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">7</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">7</button>
         <button onclick="display('8')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">8</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">8</button>
         <button onclick="display('9')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">9</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">9</button>
         <button onclick="display(' - ')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">-</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">-</button>
         <button onclick="display('0')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">0</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">0</button>
         <button onclick="display('.')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">.</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">.</button>
         <button onclick="solve()"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">=</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">=</button>
         <button onclick="display(' + ')"
-            class="p-6 dark:hover:bg-blue-300 hover:bg-slate-500 duration-200 active:scale-90 w-full bg-[#222222] text-[#F2F2F2] dark:bg-[#F2F2F2] dark:text-[#222222] text-2xl font-bold rounded-[5px] border-[none]">+</button>
+            class="w-full rounded-[5px] border-[none] bg-[#222222] p-6 text-2xl font-bold text-[#F2F2F2] duration-200 hover:bg-slate-500 active:scale-90 dark:bg-[#F2F2F2] dark:text-[#222222] dark:hover:bg-blue-300">+</button>
     </div>
 </body>
 
